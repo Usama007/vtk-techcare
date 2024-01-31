@@ -34,6 +34,12 @@ function App() {
         const renderer = fullScreenRenderer.getRenderer();
         const renderWindow = fullScreenRenderer.getRenderWindow();
 
+        const polyData = coneSource.getOutputData();
+        const numberOfVertices = polyData.getPoints().getNumberOfPoints();
+
+        console.log('Number of vertices:', numberOfVertices);
+
+
         renderer.addActor(actor);
         renderer.resetCamera();
         renderWindow.render();
@@ -109,7 +115,7 @@ function App() {
                 }}
               >
                 <option value="0">Bomb</option>
-                <option value="1">Deear</option>
+                <option value="1">Deer</option>
               </select>
             </td>
           </tr>
